@@ -29,8 +29,8 @@
       (sign service)
       (sign "aws4_request")))
 
-(defn to-hex-string [bytes]
-  "Convert bytes to a String"
+(defn hexify [bytes]
+  "Convert binary to hexformat"
   (apply str (map #(format "%02x" %) bytes)))
 
 (facts "aws signing"
@@ -40,10 +40,10 @@
         step-3 (sign step-2 test-region)
         step-4 (sign step-3 test-service)
         final (get-signature test-key test-date test-region test-service)]
-    (to-hex-string step-1) => k-secret
-    (to-hex-string step-2) => k-date
-    (to-hex-string step-3) => k-region
-    (to-hex-string step-4) => k-service
-    (to-hex-string final) => k-signing))
+    (hexify step-1) => k-secret
+    (hexify step-2) => k-date
+    (hexify step-3) => k-region
+    (hexify step-4) => k-service
+    (hexify final) => k-signing))
 
 (println (get-signature test-key test-date test-region test-service))
