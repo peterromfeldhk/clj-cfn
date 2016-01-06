@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<module cursive.leiningen.project.LeiningenProjectsManager.displayName="clj-cfn:0.1.0" cursive.leiningen.project.LeiningenProjectsManager.isLeinModule="true" type="JAVA_MODULE" version="4">
+<module cursive.leiningen.project.LeiningenProjectsManager.displayName="clj-cfn:0.1.0" cursive.leiningen.project.LeiningenProjectsManager.isLeinModule="true" type="WEB_MODULE" version="4">
   <component name="NewModuleRootManager" inherit-compiler-output="false">
     <output url="file://$MODULE_DIR$/target/classes" />
     <output-test url="file://$MODULE_DIR$/target/classes" />
     <exclude-output />
     <content url="file://$MODULE_DIR$">
-      <sourceFolder url="file://$MODULE_DIR$/resources" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/dev-resources" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/resources" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/test" isTestSource="true" />
       <excludeFolder url="file://$MODULE_DIR$/target" />
@@ -31,7 +31,7 @@
     <orderEntry type="library" name="Leiningen: environ:1.0.1" level="project" />
     <orderEntry type="library" name="Leiningen: flare:0.2.9" level="project" />
     <orderEntry type="library" name="Leiningen: http-kit:2.1.19" level="project" />
-    <orderEntry type="library" name="Leiningen: joda-time:2.8.1" level="project" />
+    <orderEntry type="library" name="Leiningen: joda-time:2.8.2" level="project" />
     <orderEntry type="library" name="Leiningen: marick/clojure-commons:1.1.2" level="project" />
     <orderEntry type="library" name="Leiningen: marick/suchwow:4.4.1" level="project" />
     <orderEntry type="library" name="Leiningen: midje:1.8.2" level="project" />

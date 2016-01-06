@@ -2,6 +2,7 @@
   :version "0.1.0"
   :dependencies
   '[[org.clojure/clojure "1.7.0"]
+    [clj-time "0.11.0"]
     [http-kit "2.1.19"]
     [camel-snake-kebab "0.3.2"]
     [com.amazonaws/aws-java-sdk-core "1.10.44"]
