@@ -17,6 +17,6 @@
       (sign service)
       (sign "aws4_request")))
 
-(defn to-hex-string [bytes]
+(defn hexify [bytes]
   "Convert bytes to a String"
   (apply str (map #(format "%02x" %) bytes)))
