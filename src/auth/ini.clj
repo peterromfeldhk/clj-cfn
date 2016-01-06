@@ -12,16 +12,16 @@
 
 (defn parse-item [item]
   (->> (s/split item #"=")
-       (mapv s/trim)))
+       (map s/trim)))
 
 (defn parse-ini [ini]
   (let [section (atom :default)]
     (reduce
-      (fn [ret item]
-        (if (vector? (read-string item))
+      (fn [ret element]
+        (if (vector? (read-string element))
           (do
-            (reset! section (-> item read-string first ->kebab-case-keyword))
+            (reset! section (-> element read-string first ->kebab-case-keyword))
             ret)
-          (let [[k v] (parse-item item)]
+          (let [[k v] (parse-item element)]
             (assoc-in ret [@section (->kebab-case-keyword k)] (str v)))))
       {} ini)))
